@@ -2,11 +2,13 @@
 body{
 	margin:10px;
 	background-color: red;
+	box-sizing:border-box;
 }
 .wrapper{
 	background-color: #E7E9E4;
-	margin:10px;
+	margin:auto;
 	padding: 10px;
+	max-width: 1200px;
 }
 /*.flexContainer {
     display: flex;
@@ -73,7 +75,7 @@ a {padding-right: 10px;
 }
 nav{
 	max-width:1200px;
-		background-color: red;
+	background-color: red;
 	margin:auto;
 	height: 20px;
 	padding: 10px 0;
@@ -96,11 +98,7 @@ nav{
 }
 
 
-.Container{
-	max-width: 1200px;
-	margin: 0 auto;
-	margin-top:10px;
-}
+
 
 .picture{
 	width: 75%;
@@ -123,11 +121,13 @@ nav{
 	text-align: center;
 	line-height: 30px;
 	padding:20px 0;
+	margin-bottom: 40px;
 }
 button{
 	cursor: pointer;
 }
 .picture img{
+
 	float: right;
 	padding-top: 30px;
 }
@@ -180,11 +180,7 @@ button{
 	border-radius: 5px;
 	border: 1px solid red;
 }
-.content{
-		max-width: 1200px;
-	margin: 0 auto;
-	margin-top:10px;
-}
+
 .text{
 float: left;
 width: 30%;
@@ -203,15 +199,23 @@ width: 30%;
   content: '✓';
   color: red;
 }
-.content p {
+.text p {
 	color: gray;
 	font-size: 25px;
 	font-weight: bold;
 }
-.content p span {
+.text p span {
 	color: red;
 	font-size: 25px;
-	
+}
+.photodata p {
+	color: gray;
+	font-size: 25px;
+	font-weight: bold;
+}
+.photodata p span {
+	color: red;
+	font-size: 25px;
 }
 .photodata{
 	width: 69%;
@@ -229,6 +233,7 @@ figure {
 	text-align: center;
 }
 footer{
+	margin-top: 60px;
 	background-color: black;
 	color:white;
 	font-size: 26px;
@@ -238,4 +243,53 @@ footer p span{
 	font-size: 16px;
 	display: block;
 	text-align: center;
+}
+
+@media (max-width: 1050px){
+	.login
+	{ width: 30%;}
+	.picture {
+		width: 100%;
+	}
+	.photodata{
+		width: 100%;
+	}
+	.text, .button{
+		margin-left:150px;
+		margin-top:40px;
+	}
+}
+
+@media (max-width: 600px){
+	.login
+	{ width: 100%;
+		color:blue;}
+	.picture>img{
+		width: 100%;
+	}
+	.photodata{
+		width: 100%;
+		flex-direction: column;
+	}
+	.photodata p{
+		display: block;
+		text-align: center;
+
+	}
+.button{
+	margin:auto;
+		margin-top:40px;
+		width: 100%;
+	}
+	.text{
+		width: 100%;
+		margin:auto;
+		text-align: center;
+	}
+	.login, .navDiv1, .navDiv2{
+		display: none;
+	}
+	#navDiv3{
+		display: block;
+	}
 }
