@@ -48,6 +48,9 @@ body{
 	color:red;
 }
 */
+
+
+
 .header{
 height: 150px;
 }
@@ -224,30 +227,122 @@ width: 30%;
 }
 .photodata{
 	width: 69%;
-	display: left;
 	display: flex;
 	justify-content: space-around;
 	border: 1px solid gray;
 	border-radius: 5px;
 	background-color: white;
+	position: relative;
 }
 .photodata p{
 	display: block;
 }
 figure {
 	text-align: center;
+
 }
 footer{
 	margin-top: 60px;
 	background-color: black;
 	color:white;
 	font-size: 26px;
-	position: relative;
+
 }
+
 footer p span{
 	font-size: 16px;
 	display: block;
 	text-align: center;
+}
+
+
+#form2{
+	display: none;
+position: fixed;
+left: 500px;
+top:200px;
+max-width: 300px;
+max-height: 300px;
+background: white;
+z-index: 15; 
+padding: 10px;
+text-align: center;
+text-transform: uppercase;
+border: 1px solid #D58F37;
+border-radius: 5px;
+transform:  scale(1.2);
+}
+#form2 input{
+padding: 5px;
+background: #00FFA9;
+border:1px solid gray;
+border-radius:5px;
+margin-top: 5px;
+
+}
+#content{
+	width: 300px;
+	height: 200px;
+	overflow: auto;
+}
+
+#massege{
+	width: 300px;
+position: absolute;
+bottom:-40px;
+
+}
+
+#massege textarea{
+	margin-top: -40px;
+	background: #00FFA9;
+	border: 1px solid gray;
+	border-radius: 5px;
+	float: left;
+	width: 300px;
+}
+#massege button{
+	background: #00FFA9;
+	border: 1px solid gray;
+	border-radius: 5px;
+
+}
+
+#cross2{
+	background: #00FFA9;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	border-radius: 80%;
+float: right;
+cursor: pointer;
+}
+#callcenter{
+	width: 100px;
+	height: 100px;
+background: gray;
+opacity: 0.8;
+text-align: center;
+line-height:100px;
+	border-radius: 50%;
+	position: absolute;
+	top: 80%;
+	left: 80%;
+	position: fixed;
+	z-index: 21;
+}
+
+#navbar{
+	width: 100px;
+	height: 100px;
+position: absolute;
+right: 5%;
+opacity: 0.8;
+text-align: center;
+display: none;
+line-height:100px;
+	position: fixed;
+	z-index: 21;
 }
 
 @media (max-width: 600px){
@@ -266,7 +361,9 @@ footer p span{
 		-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 	}
-	
+	#navbar{
+		display: block;
+	}
 	
 	.photodata{
 		width: 100%;
@@ -290,6 +387,7 @@ footer p span{
 		display: none;
 	}
 }
+
 
 
 

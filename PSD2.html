@@ -6,13 +6,24 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>business</title>
 		<link type="text/css" rel="stylesheet" href="PSD2.css"/>
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		 <script type="text/javascript" src="jscript.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+
     </head>
 <body>
-
-
+<div id="form2">
+	<div class="cross" id="cross2"><i  class="fa fa-close" style="font-size:28px"></i></div>
+	<div id="content"><p></p></div>
+	<div id="massege"><textarea rows="2" cols="40">Leave a comment</textarea>
+		<button>Отправить</button></div>
+</div>
 
 
 <div class="wrapper">
+	<div id="callcenter" onclick="klikon1()">
+	<i class="fa fa-commenting" style="font-size:48px;color:gold"></i>
+    </div>
 <div class="header">
             <div class="banner"><a href="#" class="xman"> 
             <img src="../image/gold logo.png" width="50" height="60">
@@ -23,6 +34,9 @@
             <a href="#">Settings</a>
             <a href="#">Logout</a>
     </div>
+    <div id="navbar" onclick="klikon1()">
+	<i class="fa fa-bars" style="font-size:48px;color:gold"></i>
+</div>
 </div>
     <nav>
            <div class="navDiv1"> <a href="#">Home</a>
@@ -98,10 +112,40 @@
             </figure>
      	
     </div>
-	
+
 	<footer>
 		<p>100% Secure<span>Copyright by rapyna 2018</span></p>
 	</footer>
 </div>
+<script type="text/javascript">
+	
+function klikon2() {
+    
+    var y = document.getElementById("form2");
+     setTimeout(function(){ y.style.display="block" }, 1500);
+};
+
+
+
+
+	$(document).ready(function(){
+    $("#callcenter").click(function(){
+        $("#form2").fadeIn(500);
+    });
+        
+    $(document).ready(function(){
+         $("button").click(function(){
+            var massege = $("textarea").val();
+            var old =  $("#content").html();
+            $("#content").html(old+"<p>" + massege + "</p>");
+         });
+        }); 
+
+$(document).ready(function(){
+    $('#cross1,#cross2,#cross3,#cross4,#cross5,cross6').click(function(){
+   $('#form1,#form2,#form3,#form4,#form5,#form6').fadeOut('slow');
+});
+}); 
+</script>
 </body>
 </html>
