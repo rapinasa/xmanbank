@@ -8,8 +8,7 @@
 		<link type="text/css" rel="stylesheet" href="PSD2.css"/>
 		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		 <script type="text/javascript" src="jscript.js"></script>
-<script type="text/javascript" src="jquery.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
 <body>
 <div id="form2">
@@ -21,25 +20,28 @@
 
 
 <div class="wrapper">
-	<div id="callcenter" onclick="klikon1()">
+	<div id="callcenter" onclick="klikon2()">
 	<i class="fa fa-commenting" style="font-size:48px;color:gold"></i>
     </div>
 <div class="header">
+	  <span id="navbar" style="font-size:30px;cursor:pointer; float: left;margin-right: 30px;" onclick="klikon1()">&#9776;</span>
             <div class="banner"><a href="#" class="xman"> 
             <img src="../image/gold logo.png" width="50" height="60">
             XMAN <span>BANK</span></a>
         </div>
+
         <div class="login">
             <a href="#">My account</a>
             <a href="#">Settings</a>
             <a href="#">Logout</a>
+
     </div>
-    <div id="navbar" onclick="klikon1()">
-	<i class="fa fa-bars" style="font-size:48px;color:gold"></i>
+  
 </div>
-</div>
-    <nav>
-           <div class="navDiv1"> <a href="#">Home</a>
+    <nav id="nav1">
+           <div class="navDiv1" id="navDiv1">
+            <a href="" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Home</a>
             <a href="#">About us</a>
             <a href="#">Our Services</a>
               <a href="#">Deposits</a>
@@ -72,10 +74,6 @@
      </label>
   </div>
 
-
-
-
-     
     <div class="text">
     	
     	<ul>
@@ -88,8 +86,6 @@
     	</ul>
     </div>
     
-        
-
           <div class="photodata">
             <p>How it <span>works</span></p>
             <figure>
@@ -112,27 +108,21 @@
             </figure>
      	
     </div>
-
 	<footer>
 		<p>100% Secure<span>Copyright by rapyna 2018</span></p>
 	</footer>
 </div>
 <script type="text/javascript">
-	
-function klikon2() {
-    
-    var y = document.getElementById("form2");
-     setTimeout(function(){ y.style.display="block" }, 1500);
-};
-
-
-
-
+$(document).ready(function(){
+    $("#navbar").click(function(){
+        $("#navDiv1").fadeIn(500);
+    });
+         }); 
 	$(document).ready(function(){
     $("#callcenter").click(function(){
         $("#form2").fadeIn(500);
     });
-        
+         }); 
     $(document).ready(function(){
          $("button").click(function(){
             var massege = $("textarea").val();
@@ -146,6 +136,6 @@ $(document).ready(function(){
    $('#form1,#form2,#form3,#form4,#form5,#form6').fadeOut('slow');
 });
 }); 
-</script>
+
 </body>
 </html>
