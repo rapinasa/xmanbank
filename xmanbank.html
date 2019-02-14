@@ -4,11 +4,12 @@
 		<meta charset="utf-8">
 		<meta http-equiv="Content-type">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>business</title>
+		<title>XmanBank</title>
 		<link type="text/css" rel="stylesheet" href="PSD2.css"/>
 		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		 <script type="text/javascript" src="jscript.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		  <script type="text/javascript" src="js/jquery.js"></script>
+     <script type="text/javascript" src="js/jscript.js"></script>
     </head>
 <body>
 <div id="form2">
@@ -27,7 +28,7 @@
 	  <span id="navbar" style="font-size:30px;cursor:pointer; float: left;margin-right: 30px;" onclick="klikon1()">&#9776;</span>
             <div class="banner"><a href="#" class="xman"> 
             <img src="../image/gold logo.png" width="50" height="60">
-            XMAN <span>BANK</span></a>
+            Яся  <span>ПРИВЕТ</span></a>
         </div>
 
         <div class="login">
@@ -45,7 +46,7 @@
             <a href="#">About us</a>
             <a href="#">Our Services</a>
               <a href="#">Deposits</a>
-            <a href="#">Faqs</a>
+            <a href="#" id="faq">Faqs</a>
             <a href="#">Contuct us</a>
             </div>
             <div class="navDiv2">
@@ -112,30 +113,6 @@
 		<p>100% Secure<span>Copyright by rapyna 2018</span></p>
 	</footer>
 </div>
-<script type="text/javascript">
-$(document).ready(function(){
-    $("#navbar").click(function(){
-        $("#navDiv1").fadeIn(500);
-    });
-         }); 
-	$(document).ready(function(){
-    $("#callcenter").click(function(){
-        $("#form2").fadeIn(500);
-    });
-         }); 
-    $(document).ready(function(){
-         $("button").click(function(){
-            var massege = $("textarea").val();
-            var old =  $("#content").html();
-            $("#content").html(old+"<p>" + massege + "</p>");
-         });
-        }); 
-
-$(document).ready(function(){
-    $('#cross1,#cross2,#cross3,#cross4,#cross5,cross6').click(function(){
-   $('#form1,#form2,#form3,#form4,#form5,#form6').fadeOut('slow');
-});
-}); 
 
 </body>
 </html>
